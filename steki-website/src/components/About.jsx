@@ -1,5 +1,6 @@
 import aboutImage from "../assets/about.jpg";
 import mascotMan from "../assets/steki-man.jpg";
+import "../styles/About.css";
 
 function About() {
   return (
