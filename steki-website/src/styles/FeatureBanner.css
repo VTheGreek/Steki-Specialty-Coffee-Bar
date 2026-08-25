@@ -1,0 +1,193 @@
+/* ========================================
+   FEATURE BANNER
+======================================== */
+
+.feature-banner {
+  width: 100%;
+
+  overflow: hidden;
+
+  background: var(--green);
+
+  border-top: 1px solid var(--green-dark);
+  border-bottom: 1px solid var(--green-dark);
+
+  padding: 18px 0;
+}
+
+
+/* ========================================
+   MOVING TRACK
+======================================== */
+
+.feature-banner-track {
+  display: flex;
+
+  width: max-content;
+
+  animation: bannerMove 25s linear infinite;
+}
+
+
+/* ========================================
+   BANNER CONTENT
+======================================== */
+
+.feature-banner-content {
+  display: flex;
+
+  align-items: center;
+
+  flex-shrink: 0;
+
+  gap: 28px;
+
+  padding-right: 28px;
+
+  white-space: nowrap;
+}
+
+
+/* ========================================
+   TEXT
+======================================== */
+
+.feature-banner-content span {
+  color: var(--green-dark);
+
+  font-family: var(--heading-font);
+
+  font-size: 1.5rem;
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* ========================================
+   SYMBOL
+======================================== */
+
+.feature-banner-content .banner-symbol {
+  font-family: var(--body-font);
+
+  font-size: 1rem;
+
+  font-weight: 500;
+}
+
+
+/* ========================================
+   ANIMATION
+======================================== */
+
+@keyframes bannerMove {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1050px) {
+
+  .feature-banner {
+    padding: 16px 0;
+  }
+
+  .feature-banner-content {
+    gap: 24px;
+
+    padding-right: 24px;
+  }
+
+  .feature-banner-content span {
+    font-size: 1.3rem;
+  }
+
+  .feature-banner-content .banner-symbol {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+  .feature-banner {
+    padding: 14px 0;
+  }
+
+  .feature-banner-track {
+    animation-duration: 20s;
+  }
+
+  .feature-banner-content {
+    gap: 20px;
+
+    padding-right: 20px;
+  }
+
+  .feature-banner-content span {
+    font-size: 1.1rem;
+  }
+
+  .feature-banner-content .banner-symbol {
+    font-size: 0.8rem;
+  }
+}
+
+
+/* ========================================
+   SMALL PHONES
+======================================== */
+
+@media (max-width: 480px) {
+
+  .feature-banner {
+    padding: 12px 0;
+  }
+
+  .feature-banner-track {
+    animation-duration: 18s;
+  }
+
+  .feature-banner-content {
+    gap: 16px;
+
+    padding-right: 16px;
+  }
+
+  .feature-banner-content span {
+    font-size: 1rem;
+  }
+
+  .feature-banner-content .banner-symbol {
+    font-size: 0.7rem;
+  }
+}
+
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .feature-banner-track {
+    animation: none;
+  }
+}

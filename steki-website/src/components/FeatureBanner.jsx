@@ -1,27 +1,40 @@
+import "../styles/FeatureBanner.css";
+
 function FeatureBanner() {
   return (
     <section className="feature-banner">
 
-      <div className="feature-banner-content">
+      <div className="feature-banner-track">
 
-        <span className="feature-line"></span>
+        <div className="feature-banner-content">
+          <span>STEΚΙ</span>
+          <span className="banner-symbol">✦</span>
+          <span>SPECIALTY COFFEE</span>
+          <span className="banner-symbol">✦</span>
+          <span>GOOD VIBES</span>
+          <span className="banner-symbol">✦</span>
+          <span>STEΚΙ</span>
+          <span className="banner-symbol">✦</span>
+          <span>SPECIALTY COFFEE</span>
+          <span className="banner-symbol">✦</span>
+          <span>GOOD VIBES</span>
+          <span className="banner-symbol">✦</span>
+        </div>
 
-        <p className="feature-small">
-          COFFEE • FOOD • FRIENDS
-        </p>
-
-        <h2>
-          Come as you are.
-          <br />
-          Stay as long as you like.
-        </h2>
-
-        <p className="feature-description">
-          A cozy little spot made for slow mornings,
-          good conversations and everything in between.
-        </p>
-
-        <span className="feature-line"></span>
+        <div className="feature-banner-content" aria-hidden="true">
+          <span>STEΚΙ</span>
+          <span className="banner-symbol">✦</span>
+          <span>SPECIALTY COFFEE</span>
+          <span className="banner-symbol">✦</span>
+          <span>GOOD VIBES</span>
+          <span className="banner-symbol">✦</span>
+          <span>STEΚΙ</span>
+          <span className="banner-symbol">✦</span>
+          <span>SPECIALTY COFFEE</span>
+          <span className="banner-symbol">✦</span>
+          <span>GOOD VIBES</span>
+          <span className="banner-symbol">✦</span>
+        </div>
 
       </div>
 
