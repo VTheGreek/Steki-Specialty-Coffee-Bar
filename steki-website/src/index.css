@@ -1,14 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap");
+@font-face {
+  font-family: "Eldwin";
+  src: url("./assets/fonts/Eldwin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mazzard";
+  src: url("./assets/fonts/Mazzard.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
 
 :root {
-  font-family: "Inter", sans-serif;
+  --green-dark: #174e52;
+  --green: #8fcda1;
+  --cream: #f8f4ea;
+  --white: #ffffff;
 
-  color: #174e52;
-  background: #ffffff;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
+  --heading-font: "Eldwin", serif;
+  --body-font: "Mazzard", sans-serif;
 }
 
 * {
@@ -23,14 +34,11 @@ html {
 
 body {
   min-width: 320px;
-  min-height: 100vh;
 
-  background: #ffffff;
-}
+  background: var(--white);
+  color: var(--green-dark);
 
-img {
-  display: block;
-  max-width: 100%;
+  font-family: var(--body-font);
 }
 
 a {

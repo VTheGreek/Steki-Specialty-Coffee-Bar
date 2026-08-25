@@ -1,0 +1,422 @@
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+  height: 82px;
+
+  background: var(--white);
+
+  border-bottom: 1px solid rgba(23, 78, 82, 0.1);
+}
+
+
+/* ========================================
+   NAVBAR CONTAINER
+======================================== */
+
+.navbar-container {
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+
+  margin: 0 auto;
+  padding: 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+/* ========================================
+   BRAND
+======================================== */
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  flex-shrink: 0;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  display: block;
+
+  width: 58px;
+  height: auto;
+}
+
+.navbar-name {
+  font-family: var(--heading-font);
+
+  font-size: 2rem;
+  font-weight: 400;
+
+  line-height: 1;
+
+  color: var(--green-dark);
+}
+
+
+/* ========================================
+   DESKTOP NAVIGATION
+======================================== */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+
+  gap: 36px;
+
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.navbar-links a {
+  position: relative;
+
+  font-family: var(--body-font);
+
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  color: var(--green-dark);
+
+  transition: color 0.3s ease;
+}
+
+
+/* Underline animation */
+
+.navbar-links a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -7px;
+
+  width: 0;
+  height: 1px;
+
+  background: var(--green);
+
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--green-dark);
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+
+/* ========================================
+   VISIT US BUTTON
+======================================== */
+
+.navbar-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 24px;
+
+  border-radius: 50px;
+
+  background: var(--green-dark);
+
+  color: var(--white);
+
+  font-family: var(--body-font);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.navbar-button:hover {
+  background: var(--green);
+
+  color: var(--green-dark);
+
+  transform: translateY(-2px);
+}
+
+
+/* ========================================
+   HAMBURGER
+======================================== */
+
+.menu-toggle {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 8px;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+}
+
+.menu-toggle span {
+  display: block;
+
+  width: 24px;
+  height: 2px;
+
+  background: var(--green-dark);
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+
+/* Hamburger → X */
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+
+/* ========================================
+   MOBILE MENU
+======================================== */
+
+.mobile-menu {
+  position: absolute;
+
+  top: 82px;
+  left: 0;
+
+  width: 100%;
+
+  padding: 25px;
+
+  background: var(--white);
+
+  border-bottom: 1px solid rgba(23, 78, 82, 0.1);
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(-15px);
+
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    transform 0.3s ease;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+.mobile-menu a {
+  display: block;
+
+  padding: 11px 0;
+
+  font-family: var(--body-font);
+
+  font-size: 1rem;
+  font-weight: 500;
+
+  color: var(--green-dark);
+}
+
+.mobile-menu a:hover {
+  color: var(--green);
+}
+
+
+/* Mobile Visit Us */
+
+.mobile-menu-button {
+  width: 100%;
+
+  margin-top: 10px;
+
+  padding: 14px 20px !important;
+
+  border-radius: 50px;
+
+  background: var(--green-dark);
+
+  color: var(--white) !important;
+
+  text-align: center;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1050px) {
+
+  .navbar-container {
+    padding: 0 25px;
+  }
+
+  .navbar-links {
+    gap: 22px;
+
+    margin-right: 25px;
+  }
+
+  .navbar-links a {
+    font-size: 0.78rem;
+  }
+
+  .navbar-button {
+    padding: 10px 18px;
+  }
+
+  .navbar-name {
+    font-size: 1.8rem;
+  }
+
+  .navbar-logo img {
+    width: 52px;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    height: 70px;
+  }
+
+  .navbar-container {
+    padding: 0 20px;
+  }
+
+
+  /* Brand */
+
+  .navbar-brand {
+    gap: 10px;
+  }
+
+  .navbar-logo img {
+    width: 48px;
+  }
+
+  .navbar-name {
+    font-size: 1.7rem;
+  }
+
+
+  /* Hide desktop navigation */
+
+  .navbar-links,
+  .navbar-button {
+    display: none;
+  }
+
+
+  /* Show hamburger */
+
+  .menu-toggle {
+    display: flex;
+  }
+
+
+  /* Mobile menu position */
+
+  .mobile-menu {
+    top: 70px;
+  }
+}
+
+
+/* ========================================
+   SMALL PHONES
+======================================== */
+
+@media (max-width: 480px) {
+
+  .navbar-container {
+    padding: 0 16px;
+  }
+
+  .navbar-logo img {
+    width: 44px;
+  }
+
+  .navbar-name {
+    font-size: 1.55rem;
+  }
+
+  .navbar-brand {
+    gap: 8px;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .menu-toggle span {
+    width: 22px;
+  }
+
+  .mobile-menu {
+    padding: 20px;
+  }
+}

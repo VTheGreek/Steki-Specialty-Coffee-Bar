@@ -1,5 +1,6 @@
 import { useState } from "react";
 import logo from "../assets/steki-logo.jpg";
+import "../styles/Navbar.css";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,27 +11,46 @@ function Navbar() {
 
   return (
     <header className="navbar">
+
       <div className="navbar-container">
 
-        {/* Logo */}
-        <a
-          href="#home"
-          className="navbar-logo"
-          onClick={closeMenu}
-        >
-          <img
-            src={logo}
-            alt="Steki Specialty Coffee Bar"
-          />
-        </a>
+        {/* Logo + Name */}
+        <div className="navbar-brand">
+
+          <a
+            href="#home"
+            className="navbar-logo"
+            onClick={closeMenu}
+          >
+            <img
+              src={logo}
+              alt="Steki Specialty Coffee Bar"
+            />
+          </a>
+
+          <a
+            href="#home"
+            className="navbar-name"
+            onClick={closeMenu}
+          >
+            Steki
+          </a>
+
+        </div>
 
         {/* Desktop Navigation */}
         <nav className="navbar-links">
+
           <a href="#home">Home</a>
+
           <a href="#about">About</a>
+
           <a href="#coffee">Coffee</a>
+
           <a href="#menu">Menu</a>
+
           <a href="#contact">Contact</a>
+
         </nav>
 
         {/* Desktop CTA */}
@@ -61,23 +81,39 @@ function Navbar() {
       <nav
         className={`mobile-menu ${menuOpen ? "open" : ""}`}
       >
-        <a href="#home" onClick={closeMenu}>
+
+        <a
+          href="#home"
+          onClick={closeMenu}
+        >
           Home
         </a>
 
-        <a href="#about" onClick={closeMenu}>
+        <a
+          href="#about"
+          onClick={closeMenu}
+        >
           About
         </a>
 
-        <a href="#coffee" onClick={closeMenu}>
+        <a
+          href="#coffee"
+          onClick={closeMenu}
+        >
           Coffee
         </a>
 
-        <a href="#menu" onClick={closeMenu}>
+        <a
+          href="#menu"
+          onClick={closeMenu}
+        >
           Menu
         </a>
 
-        <a href="#contact" onClick={closeMenu}>
+        <a
+          href="#contact"
+          onClick={closeMenu}
+        >
           Contact
         </a>
 
@@ -88,7 +124,9 @@ function Navbar() {
         >
           Visit Us
         </a>
+
       </nav>
+
     </header>
   );
 }
