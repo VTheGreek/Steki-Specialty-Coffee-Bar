@@ -5,6 +5,7 @@ import About from "../components/About";
 import CoffeeSection from "../components/CoffeeSection";
 import FoodSection from "../components/FoodSection";
 import Footer from "../components/Footer";
+import Menu from "../components/Menu";
 
 function Home() {
   return (
@@ -15,6 +16,7 @@ function Home() {
         <Hero />
         <FeatureBanner />
         <About />
+        <Menu />
         <CoffeeSection />
         <FoodSection />
       </main>

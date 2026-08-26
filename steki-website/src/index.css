@@ -1,8 +1,9 @@
 @font-face {
   font-family: "Eldwin";
-  src: url("./assets/fonts/Eldwin.woff2") format("woff2");
-  font-weight: 400;
+  src: url("./assets/fonts/EldwinTrial-ScriptLight.otf") format("opentype");
+  font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {

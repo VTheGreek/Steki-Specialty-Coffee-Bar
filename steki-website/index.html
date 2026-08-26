@@ -1,13 +1,68 @@
 <!doctype html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>steki-website</title>
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>Steki Specialty Coffee Bar</title>
   </head>
+
   <body>
+
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- OrderBilly Widget -->
+    <script>
+      (function (w, d, s, o, f, js, fjs) {
+        w[o] = w[o] || function () {
+          (w[o].q = w[o].q || []).push(arguments);
+        };
+
+        js = d.createElement(s);
+        fjs = d.getElementsByTagName(s)[0];
+
+        js.id = o;
+        js.src = f;
+        js.async = true;
+
+        fjs.parentNode.insertBefore(js, fjs);
+
+      }(
+        window,
+        document,
+        'script',
+        'widgetPreview',
+        'https://widgets.orderbilly.com/billy.widget.min.js'
+      ));
+
+      widgetPreview('init', {
+        venue: '359a52b4-93bd-4980-a7e1-535ff7686f9d',
+        giftcards: false,
+        buttons: true,
+        buttonsPositionHorizontal: 'right',
+        buttonsPositionVertical: 'bottom',
+        widgetPositionHorizontal: 'right',
+        widgetPositionVertical: 'bottom'
+      });
+    </script>
+
+    <!-- React -->
+    <script
+      type="module"
+      src="/src/main.jsx"
+    ></script>
+
   </body>
+
 </html>
