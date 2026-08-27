@@ -1,5 +1,6 @@
 import coffeeImage from "../assets/coffee.jpg";
 import mascotWoman from "../assets/steki-woman.jpg";
+import "../styles/CoffeeSection.css";
 
 function CoffeeSection() {
   return (
