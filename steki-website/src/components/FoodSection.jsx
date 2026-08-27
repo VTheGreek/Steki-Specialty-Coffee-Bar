@@ -1,20 +1,19 @@
 import foodImage from "../assets/food.jpeg";
 import mascotCoffee from "../assets/steki_specialty_coffee.png";
+import "../styles/FoodSection.css";
 
 function FoodSection() {
   return (
-    <section className="food-section section" id="menu">
+    <section className="food-section section" id="food">
 
       <div className="food-container">
 
         <div className="food-image-wrapper">
-
           <img
             src={foodImage}
             alt="Waffles at Steki"
             className="food-image"
           />
-
         </div>
 
         <div className="food-content">
