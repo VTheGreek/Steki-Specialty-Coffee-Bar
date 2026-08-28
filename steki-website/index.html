@@ -24,38 +24,13 @@
 
     <!-- OrderBilly Widget -->
     <script>
-      (function (w, d, s, o, f, js, fjs) {
-        w[o] = w[o] || function () {
-          (w[o].q = w[o].q || []).push(arguments);
-        };
-
-        js = d.createElement(s);
-        fjs = d.getElementsByTagName(s)[0];
-
-        js.id = o;
-        js.src = f;
-        js.async = true;
-
-        fjs.parentNode.insertBefore(js, fjs);
-
-      }(
-        window,
-        document,
-        'script',
-        'widgetPreview',
-        'https://widgets.orderbilly.com/billy.widget.min.js'
-      ));
-
-      widgetPreview('init', {
-        venue: '359a52b4-93bd-4980-a7e1-535ff7686f9d',
-        giftcards: false,
-        buttons: true,
-        buttonsPositionHorizontal: 'right',
-        buttonsPositionVertical: 'bottom',
-        widgetPositionHorizontal: 'right',
-        widgetPositionVertical: 'bottom'
-      });
-    </script>
+    (function (w, d, s, o, f, js, fjs) {
+        w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+        js = d.createElement(s); fjs = d.getElementsByTagName(s)[0];
+        js.id = o; js.src = f; js.async = true; fjs.parentNode.insertBefore(js, fjs);
+    }(window, document, 'script', 'widgetPreview', 'https://widgets.orderbilly.com/billy.widget.min.js'));
+    widgetPreview('init', {"venue":"359a52b4-93bd-4980-a7e1-535ff7686f9d","menu":"24c5cb07-9e03-4b79-b80b-98e9dda2aa2c","giftcards":false,"buttons":true,"buttonsPositionHorizontal":"right","buttonsPositionVertical":"bottom","widgetPositionHorizontal":"right","widgetPositionVertical":"bottom"})
+</script>
 
     <!-- React -->
     <script
