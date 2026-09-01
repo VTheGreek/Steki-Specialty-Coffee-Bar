@@ -1,22 +1,21 @@
-import heroImage from "../assets/hero.jpg";
-import "../styles/Hero.css"
+import heroImage from "../assets/about.jpg";
+
+import "../styles/Hero.css";
 
 function Hero() {
   return (
     <section className="hero" id="home">
-
       <img
         src={heroImage}
-        alt="Steki coffee shop"
+        alt="Steki Specialty Coffee Bar"
         className="hero-image"
       />
 
       <div className="hero-overlay"></div>
 
       <div className="hero-content">
-
-        <p className="hero-small-text">
-          SPECIALTY COFFEE • GOOD VIBES
+        <p className="hero-label">
+          SPECIALTY COFFEE
         </p>
 
         <h1>
@@ -30,13 +29,7 @@ function Hero() {
           <br />
           and a place to feel at home.
         </p>
-
-        <a href="#about" className="hero-button">
-          Discover Steki
-        </a>
-
       </div>
-
     </section>
   );
 }

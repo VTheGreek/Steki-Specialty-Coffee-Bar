@@ -4,30 +4,24 @@
 
 .hero {
   position: relative;
-
   width: 100%;
-  height: calc(100vh - 82px);
-
-  min-height: 600px;
-
+  height: 75vh;
+  min-height: 520px;
+  max-height: 720px;
   overflow: hidden;
 }
-
 
 /* ========================================
    HERO IMAGE
 ======================================== */
 
 .hero-image {
+  display: block;
   width: 100%;
   height: 100%;
-
-  display: block;
-
   object-fit: cover;
   object-position: center;
 }
-
 
 /* ========================================
    OVERLAY
@@ -35,18 +29,9 @@
 
 .hero-overlay {
   position: absolute;
-
   inset: 0;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(23, 78, 82, 0.12) 0%,
-      rgba(23, 78, 82, 0.25) 45%,
-      rgba(23, 78, 82, 0.55) 100%
-    );
+  background: rgba(20, 71, 76, 0.28);
 }
-
 
 /* ========================================
    HERO CONTENT
@@ -54,134 +39,77 @@
 
 .hero-content {
   position: absolute;
-
   inset: 0;
 
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
 
   padding: 40px;
-
   text-align: center;
 
   color: var(--white);
 }
 
-
 /* ========================================
-   SMALL TEXT
+   LABEL
 ======================================== */
 
-.hero-small-text {
-  margin-bottom: 25px;
+.hero-label {
+  margin-bottom: 20px;
 
   font-family: var(--body-font);
-
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 600;
-
-  letter-spacing: 4px;
-
-  line-height: 1.4;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
-
 
 /* ========================================
    HEADING
 ======================================== */
 
-.hero h1 {
-  margin-bottom: 30px;
+.hero-content h1 {
+  margin: 0;
 
   font-family: var(--heading-font);
-
-  font-size: clamp(4rem, 7vw, 7rem);
-
+  font-size: clamp(3.5rem, 7vw, 7rem);
   font-weight: 400;
-
-  line-height: 0.9;
-
-  letter-spacing: -1px;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
 }
-
 
 /* ========================================
    DESCRIPTION
 ======================================== */
 
 .hero-description {
-  margin-bottom: 35px;
+  margin-top: 28px;
 
   font-family: var(--body-font);
-
-  font-size: 0.95rem;
-
+  font-size: 1rem;
   font-weight: 400;
-
-  line-height: 1.7;
+  line-height: 1.6;
 }
-
-
-/* ========================================
-   BUTTON
-======================================== */
-
-.hero-button {
-  display: inline-flex;
-
-  align-items: center;
-  justify-content: center;
-
-  padding: 14px 28px;
-
-  border-radius: 50px;
-
-  background: var(--white);
-
-  color: var(--green-dark);
-
-  font-family: var(--body-font);
-
-  font-size: 0.8rem;
-  font-weight: 600;
-
-  transition:
-    background 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease;
-}
-
-.hero-button:hover {
-  background: var(--green);
-
-  color: var(--green-dark);
-
-  transform: translateY(-2px);
-}
-
 
 /* ========================================
    TABLET
 ======================================== */
 
-@media (max-width: 1050px) {
-
+@media (max-width: 768px) {
   .hero {
-    height: calc(100vh - 82px);
-
-    min-height: 550px;
+    height: 65vh;
+    min-height: 450px;
+    max-height: 600px;
   }
 
   .hero-content {
-    padding: 30px;
+    padding: 30px 20px;
   }
 
-  .hero h1 {
-    font-size: clamp(3.8rem, 8vw, 6rem);
+  .hero-content h1 {
+    font-size: clamp(3rem, 11vw, 5rem);
   }
 
   .hero-description {
@@ -189,91 +117,25 @@
   }
 }
 
-
-/* ========================================
-   MOBILE
-======================================== */
-
-@media (max-width: 768px) {
-
-  .hero {
-    height: calc(100vh - 70px);
-
-    min-height: 580px;
-    max-height: 760px;
-  }
-
-  .hero-image {
-    object-position: center;
-  }
-
-  .hero-content {
-    padding: 25px 20px;
-  }
-
-  .hero-small-text {
-    margin-bottom: 20px;
-
-    font-size: 0.58rem;
-
-    letter-spacing: 2.5px;
-  }
-
-  .hero h1 {
-    margin-bottom: 25px;
-
-    font-size: clamp(3rem, 12vw, 4.5rem);
-
-    line-height: 0.9;
-
-    letter-spacing: -0.5px;
-  }
-
-  .hero-description {
-    margin-bottom: 28px;
-
-    font-size: 0.82rem;
-
-    line-height: 1.7;
-  }
-
-  .hero-button {
-    padding: 13px 25px;
-
-    font-size: 0.75rem;
-  }
-}
-
-
 /* ========================================
    SMALL PHONES
 ======================================== */
 
 @media (max-width: 480px) {
-
   .hero {
-    min-height: 550px;
+    height: 60vh;
+    min-height: 400px;
   }
 
-  .hero-content {
-    padding: 20px;
+  .hero-label {
+    font-size: 0.65rem;
   }
 
-  .hero-small-text {
-    font-size: 0.52rem;
-
-    letter-spacing: 2px;
-  }
-
-  .hero h1 {
-    font-size: 3.15rem;
+  .hero-content h1 {
+    font-size: 3rem;
   }
 
   .hero-description {
-    font-size: 0.78rem;
-  }
-
-  .hero-button {
-    padding: 12px 23px;
+    font-size: 0.85rem;
   }
 }
