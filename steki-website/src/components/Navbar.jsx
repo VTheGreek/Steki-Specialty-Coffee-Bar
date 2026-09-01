@@ -1,5 +1,7 @@
 import { useState } from "react";
+
 import logo from "../assets/steki-logo.jpg";
+
 import "../styles/Navbar.css";
 
 function Navbar() {
@@ -11,12 +13,10 @@ function Navbar() {
 
   return (
     <header className="navbar">
-
       <div className="navbar-container">
 
         {/* Logo + Name */}
         <div className="navbar-brand">
-
           <a
             href="#home"
             className="navbar-logo"
@@ -35,31 +35,24 @@ function Navbar() {
           >
             Steki
           </a>
-
         </div>
 
         {/* Desktop Navigation */}
         <nav className="navbar-links">
-
           <a href="#home">Home</a>
-
           <a href="#about">About</a>
-
-          <a href="#coffee">Coffee</a>
-
-          <a href="#menu">Menu</a>
-
+          <a href="#gallery">Gallery</a>
           <a href="#contact">Contact</a>
-
         </nav>
 
-        {/* Desktop CTA */}
+        {/* Instagram CTA */}
         <a
-          href="#contact"
+          href="https://www.instagram.com/steki_specialty_coffee_bar?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw=="
           className="navbar-button"
-          onClick={closeMenu}
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Visit Us
+          Follow Us on Instagram
         </a>
 
         {/* Mobile Hamburger */}
@@ -74,59 +67,38 @@ function Navbar() {
           <span></span>
           <span></span>
         </button>
-
       </div>
 
       {/* Mobile Navigation */}
       <nav
         className={`mobile-menu ${menuOpen ? "open" : ""}`}
       >
-
-        <a
-          href="#home"
-          onClick={closeMenu}
-        >
+        <a href="#home" onClick={closeMenu}>
           Home
         </a>
 
-        <a
-          href="#about"
-          onClick={closeMenu}
-        >
+        <a href="#about" onClick={closeMenu}>
           About
         </a>
 
-        <a
-          href="#coffee"
-          onClick={closeMenu}
-        >
-          Coffee
+        <a href="#gallery" onClick={closeMenu}>
+          Gallery
         </a>
 
-        <a
-          href="#menu"
-          onClick={closeMenu}
-        >
-          Menu
-        </a>
-
-        <a
-          href="#contact"
-          onClick={closeMenu}
-        >
+        <a href="#contact" onClick={closeMenu}>
           Contact
         </a>
 
         <a
-          href="#contact"
+          href="https://www.instagram.com/steki_specialty_coffee_bar?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw=="
           className="mobile-menu-button"
+          target="_blank"
+          rel="noopener noreferrer"
           onClick={closeMenu}
         >
-          Visit Us
+          Follow Us on Instagram
         </a>
-
       </nav>
-
     </header>
   );
 }

@@ -127,30 +127,21 @@
 
 
 /* ========================================
-   VISIT US BUTTON
+   INSTAGRAM BUTTON
 ======================================== */
 
 .navbar-button {
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
-
-  padding: 12px 24px;
-
+  padding: 12px 22px;
   border-radius: 50px;
-
   background: var(--green-dark);
-
   color: var(--white);
-
   font-family: var(--body-font);
-
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 600;
-
   white-space: nowrap;
-
   transition:
     background 0.3s ease,
     color 0.3s ease,
@@ -159,9 +150,7 @@
 
 .navbar-button:hover {
   background: var(--green);
-
   color: var(--green-dark);
-
   transform: translateY(-2px);
 }
 
@@ -279,23 +268,22 @@
 }
 
 
-/* Mobile Visit Us */
+/* Mobile Instagram Button */
 
 .mobile-menu-button {
   width: 100%;
-
   margin-top: 10px;
-
   padding: 14px 20px !important;
-
   border-radius: 50px;
-
   background: var(--green-dark);
-
   color: var(--white) !important;
-
   text-align: center;
 }
+
+.mobile-menu-button:hover {
+  background: var(--green);
+  color: var(--green-dark) !important;
+} 
 
 
 /* ========================================
