@@ -4,149 +4,329 @@
 
 .about {
   width: 100%;
-
-  padding: 120px 40px;
-
+  padding: 140px 40px 0;
   background: var(--cream);
+  color: var(--green-dark);
+}
+
+.about-label {
+  margin: 0 0 22px;
+
+  font-family: var(--body-font);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  color: var(--green-dark);
 }
 
 
 /* ========================================
-   CONTAINER
+   INTRO
 ======================================== */
 
-.about-container {
+.about-intro {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 140px;
+}
+
+.about-intro-title {
+  max-width: 1050px;
+  margin: 0;
+
+  font-family: var(--heading-font);
+  font-size: clamp(4rem, 7vw, 7.5rem);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: -2px;
+
+  color: var(--green-dark);
+}
+
+.about-intro-title span {
+  display: block;
+}
+
+.about-intro-location {
+  margin-top: 35px;
+
+  font-family: var(--body-font);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+
+  opacity: 0.7;
+}
+
+
+/* ========================================
+   HOW IT STARTED
+======================================== */
+
+.about-story {
   width: 100%;
   max-width: 1400px;
-
   margin: 0 auto;
 
   display: grid;
-
-  grid-template-columns: 1fr 1fr;
-
-  gap: 90px;
-
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 100px;
   align-items: center;
 }
 
-
-/* ========================================
-   IMAGE
-======================================== */
-
-.about-image-wrapper {
+.about-story-image {
   width: 100%;
-
   overflow: hidden;
-
-  border-radius: 2px;
 }
 
-.about-image {
+.about-story-image img {
   display: block;
-
   width: 100%;
-  height: 650px;
-
+  height: 700px;
   object-fit: cover;
 
-  transition: transform 0.6s ease;
+  transition: transform 0.7s ease;
 }
 
-.about-image-wrapper:hover .about-image {
+.about-story-image:hover img {
   transform: scale(1.03);
 }
 
-
-/* ========================================
-   CONTENT
-======================================== */
-
-.about-content {
-  position: relative;
-
+.about-story-content {
   max-width: 560px;
 }
 
-
-/* ========================================
-   LABEL
-======================================== */
-
-.section-label {
-  margin-bottom: 22px;
-
-  font-family: var(--body-font);
-
-  font-size: 0.7rem;
-  font-weight: 600;
-
-  letter-spacing: 3px;
-
-  color: var(--green-dark);
-}
-
-
-/* ========================================
-   HEADING
-======================================== */
-
-.about-content h2 {
-  margin-bottom: 30px;
+.about-story-content h3 {
+  margin: 0 0 35px;
 
   font-family: var(--heading-font);
-
-  font-size: clamp(3.5rem, 5vw, 5.5rem);
-
+  font-size: clamp(3.2rem, 5vw, 5.5rem);
   font-weight: 400;
-
   line-height: 0.9;
-
   letter-spacing: -1px;
-
-  color: var(--green-dark);
 }
 
-
-/* ========================================
-   TEXT
-======================================== */
-
-.about-content > p:not(.section-label) {
-  max-width: 500px;
-
-  margin-bottom: 18px;
+.about-story-content p:not(.about-label) {
+  max-width: 510px;
+  margin: 0 0 18px;
 
   font-family: var(--body-font);
-
   font-size: 0.95rem;
-
   line-height: 1.8;
-
-  color: var(--green-dark);
 
   opacity: 0.85;
 }
 
 
 /* ========================================
-   MASCOT
+   WHY STEKI
 ======================================== */
 
-.mascot-wrapper {
-  margin-top: 35px;
-
-  width: 130px;
+.about-meaning {
+  max-width: 1200px;
+  margin: 180px auto 0;
+  padding-bottom: 160px;
 }
 
-.mascot-image {
+.about-meaning-heading {
+  margin-bottom: 80px;
+}
+
+.about-meaning-heading h3 {
+  margin: 0;
+
+  font-family: var(--heading-font);
+  font-size: clamp(3.5rem, 6vw, 6rem);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -1px;
+}
+
+.about-meaning-content {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.meaning-word {
+  text-align: center;
+}
+
+.meaning-greek,
+.meaning-dutch {
+  display: block;
+  margin-bottom: 25px;
+
+  font-family: var(--heading-font);
+  font-size: clamp(3rem, 5vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.meaning-word p {
+  max-width: 390px;
+  margin: 0 auto;
+
+  font-family: var(--body-font);
+  font-size: 0.9rem;
+  line-height: 1.8;
+
+  opacity: 0.8;
+}
+
+.meaning-divider {
+  font-family: var(--heading-font);
+  font-size: 3rem;
+  opacity: 0.5;
+}
+
+.about-meaning-ending {
+  max-width: 650px;
+  margin: 90px auto 0;
+
+  font-family: var(--heading-font);
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.1;
+  text-align: center;
+}
+
+
+/* ========================================
+   COFFEE + FOOD
+======================================== */
+
+.about-values {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+
+  padding-bottom: 150px;
+}
+
+.about-value {
+  padding-top: 60px;
+  border-top: 1px solid rgba(23, 78, 82, 0.2);
+}
+
+.about-value h3 {
+  margin: 0 0 35px;
+
+  font-family: var(--heading-font);
+  font-size: clamp(3rem, 4vw, 4.5rem);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -1px;
+}
+
+.about-value p:not(.about-label) {
+  max-width: 500px;
+  margin: 0 0 18px;
+
+  font-family: var(--body-font);
+  font-size: 0.9rem;
+  line-height: 1.8;
+
+  opacity: 0.82;
+}
+
+
+/* ========================================
+   PHILOSOPHY
+======================================== */
+
+.about-philosophy {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 130px 0;
+
+  text-align: center;
+}
+
+.about-philosophy p {
+  margin: 0;
+
+  font-family: var(--heading-font);
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  line-height: 1;
+}
+
+.about-philosophy p:first-child {
+  margin-bottom: 35px;
+}
+
+.about-philosophy span {
+  font-style: italic;
+}
+
+
+/* ========================================
+   YOUR STEKI
+======================================== */
+
+.about-ending {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  padding: 120px 0 0;
+
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 80px;
+  align-items: end;
+
+  border-top: 1px solid rgba(23, 78, 82, 0.2);
+}
+
+.about-ending-content {
+  padding-bottom: 80px;
+}
+
+.about-ending h3 {
+  margin: 0 0 35px;
+
+  font-family: var(--heading-font);
+  font-size: clamp(4rem, 6vw, 6.5rem);
+  font-weight: 400;
+  line-height: 0.88;
+  letter-spacing: -2px;
+}
+
+.about-ending-content > p:not(.about-label) {
+  max-width: 500px;
+  margin-bottom: 30px;
+
+  font-family: var(--body-font);
+  font-size: 0.95rem;
+  line-height: 1.8;
+
+  opacity: 0.85;
+}
+
+.about-ending strong {
   display: block;
 
-  width: 100%;
-  height: auto;
+  font-family: var(--heading-font);
+  font-size: 1.8rem;
+  font-weight: 400;
+}
 
-  object-fit: contain;
+.about-ending-mascot {
+  display: flex;
+  justify-content: center;
+}
+
+.about-ending-mascot img {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
 }
 
 
@@ -157,24 +337,39 @@
 @media (max-width: 1050px) {
 
   .about {
-    padding: 90px 30px;
+    padding: 100px 30px 0;
   }
 
-  .about-container {
+  .about-intro {
+    padding-bottom: 100px;
+  }
+
+  .about-story {
     gap: 55px;
   }
 
-  .about-image {
-    height: 550px;
+  .about-story-image img {
+    height: 580px;
   }
 
-  .about-content h2 {
-    font-size: clamp(3rem, 6vw, 4.5rem);
+  .about-meaning {
+    margin-top: 130px;
+    padding-bottom: 120px;
   }
 
-  .about-content > p:not(.section-label) {
-    font-size: 0.9rem;
+  .about-meaning-content {
+    gap: 40px;
   }
+
+  .about-values {
+    gap: 60px;
+  }
+
+  .about-ending {
+    grid-template-columns: 1fr 280px;
+    gap: 50px;
+  }
+
 }
 
 
@@ -185,60 +380,153 @@
 @media (max-width: 768px) {
 
   .about {
-    padding: 70px 20px;
+    padding: 75px 20px 0;
   }
 
-  .about-container {
+
+  /* Intro */
+
+  .about-intro {
+    padding-bottom: 80px;
+  }
+
+  .about-intro-title {
+    font-size: clamp(3.2rem, 14vw, 5rem);
+    letter-spacing: -1px;
+  }
+
+  .about-intro-location {
+    margin-top: 25px;
+  }
+
+
+  /* Story */
+
+  .about-story {
     display: flex;
-
     flex-direction: column;
-
-    gap: 45px;
-
-    align-items: stretch;
+    gap: 50px;
   }
 
-  .about-image-wrapper {
+  .about-story-image {
     width: 100%;
   }
 
-  .about-image {
-    height: 500px;
+  .about-story-image img {
+    height: 480px;
   }
 
-  .about-content {
+  .about-story-content {
     max-width: none;
   }
 
-  .section-label {
-    margin-bottom: 18px;
-
-    font-size: 0.65rem;
-
-    letter-spacing: 2.5px;
-  }
-
-  .about-content h2 {
-    margin-bottom: 25px;
-
+  .about-story-content h3 {
     font-size: clamp(3rem, 13vw, 4.5rem);
-
-    line-height: 0.9;
   }
 
-  .about-content > p:not(.section-label) {
-    max-width: none;
-
+  .about-story-content p:not(.about-label) {
     font-size: 0.88rem;
-
     line-height: 1.75;
   }
 
-  .mascot-wrapper {
-    margin-top: 30px;
 
-    width: 110px;
+  /* Meaning */
+
+  .about-meaning {
+    margin-top: 110px;
+    padding-bottom: 100px;
   }
+
+  .about-meaning-heading {
+    margin-bottom: 55px;
+  }
+
+  .about-meaning-heading h3 {
+    font-size: clamp(3rem, 13vw, 4.5rem);
+  }
+
+  .about-meaning-content {
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .meaning-divider {
+    font-size: 2rem;
+  }
+
+  .meaning-word p {
+    font-size: 0.85rem;
+  }
+
+  .about-meaning-ending {
+    margin-top: 65px;
+    font-size: 2rem;
+  }
+
+
+  /* Values */
+
+  .about-values {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    padding-bottom: 100px;
+  }
+
+  .about-value {
+    padding-top: 45px;
+  }
+
+  .about-value h3 {
+    font-size: clamp(3rem, 12vw, 4.2rem);
+  }
+
+  .about-value p:not(.about-label) {
+    font-size: 0.88rem;
+  }
+
+
+  /* Philosophy */
+
+  .about-philosophy {
+    padding: 90px 0;
+  }
+
+  .about-philosophy p {
+    font-size: clamp(2.5rem, 11vw, 4rem);
+  }
+
+
+  /* Ending */
+
+  .about-ending {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 80px;
+  }
+
+  .about-ending-content {
+    padding-bottom: 0;
+  }
+
+  .about-ending h3 {
+    font-size: clamp(3.5rem, 14vw, 5rem);
+  }
+
+  .about-ending strong {
+    font-size: 1.5rem;
+  }
+
+  .about-ending-mascot {
+    justify-content: center;
+  }
+
+  .about-ending-mascot img {
+    max-width: 220px;
+  }
+
 }
 
 
@@ -249,32 +537,26 @@
 @media (max-width: 480px) {
 
   .about {
-    padding: 60px 16px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
-  .about-container {
-    gap: 35px;
-  }
-
-  .about-image {
-    height: 420px;
-  }
-
-  .section-label {
+  .about-label {
     font-size: 0.58rem;
-
     letter-spacing: 2px;
   }
 
-  .about-content h2 {
-    font-size: 3.1rem;
+  .about-story-image img {
+    height: 400px;
   }
 
-  .about-content > p:not(.section-label) {
+  .about-story-content p:not(.about-label),
+  .about-value p:not(.about-label) {
     font-size: 0.82rem;
   }
 
-  .mascot-wrapper {
-    width: 95px;
+  .about-ending strong {
+    font-size: 1.35rem;
   }
+
 }
