@@ -29,6 +29,7 @@
 .about-intro {
   width: 100%;
   max-width: 1200px;
+  min-width: 0;
   margin: 0 auto;
   padding-bottom: 140px;
 }
@@ -69,7 +70,7 @@
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-
+  min-width: 0;
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 100px;
@@ -96,6 +97,8 @@
 
 .about-story-content {
   max-width: 560px;
+  max-width: 560px;
+  min-width: 0;
 }
 
 .about-story-content h3 {
@@ -391,8 +394,12 @@
   }
 
   .about-intro-title {
-    font-size: clamp(3.2rem, 14vw, 5rem);
-    letter-spacing: -1px;
+  width: 100%;
+  max-width: 100%;
+  font-size: clamp(2.8rem, 12vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.5px;
+  overflow-wrap: break-word;
   }
 
   .about-intro-location {
@@ -421,7 +428,11 @@
   }
 
   .about-story-content h3 {
-    font-size: clamp(3rem, 13vw, 4.5rem);
+   width: 100%;
+   max-width: 100%;
+   font-size: clamp(2.8rem, 12vw, 4.5rem);
+   line-height: 0.95;
+  overflow-wrap: break-word;
   }
 
   .about-story-content p:not(.about-label) {
@@ -442,7 +453,11 @@
   }
 
   .about-meaning-heading h3 {
-    font-size: clamp(3rem, 13vw, 4.5rem);
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(2.8rem, 12vw, 4.5rem);
+    line-height: 0.95;
+    overflow-wrap: break-word;
   }
 
   .about-meaning-content {
